@@ -5,7 +5,9 @@ const review = document.querySelectorAll(
 const ourReviews = document.querySelector(".reviews");
 
 window.onscroll = () => {
-  if (this.scrollY >= ourReviews.offsetTop) {
+  console.log(this.scrollY);
+  console.log(ourReviews.offsetTop);
+  if (this.scrollY >= ourReviews.offsetTop - 150) {
     review.forEach((e) => {
       e.style.width = e.dataset.rating;
     });

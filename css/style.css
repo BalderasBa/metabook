@@ -6,7 +6,31 @@
 }
 .class-scroll {
   height: 800px;
+  text-align: center;
+  padding-top: 100px;
+  font-size: 40px;
+  font-weight: bold;
 }
+.class-scroll i {
+  animation: bouncing 900ms alternate infinite;
+  color: var(--color-main);
+}
+@keyframes bouncing{
+  0%,
+  10%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40%,
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -19,18 +43,6 @@
 }
 html {
   font-family: "Lato", sans-serif;
-}
-.reviews {
-  padding: 100px 0 30px;
-  background-color: var(--color-bg-light);
-}
-.reviews h2 {
-  text-align: center;
-  font-size: 24px;
-  line-height: 30px;
-  font-weight: 900;
-  margin-bottom: 40px;
-  color: #000;
 }
 .btn {
   cursor: pointer;
@@ -54,6 +66,19 @@ html {
 .reviews .container {
   padding: 0 30px;
   display: flex;
+}
+
+.reviews {
+  padding: 100px 0 30px;
+  background-color: var(--color-bg-light);
+}
+.reviews h2 {
+  text-align: center;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 900;
+  margin-bottom: 40px;
+  color: #000;
 }
 /* ------ Part1 : Global Reviews ------ */
 .reviews .reviews-global {
