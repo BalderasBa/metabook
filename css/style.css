@@ -1,7 +1,12 @@
 :root {
   --color-main: #0092d6;
+  --color-text: #767676;
+  --color-bg-light: #eeeeeeb3;
+  --transition-main: 400ms;
 }
-
+.class-scroll {
+  height: 800px;
+}
 * {
   padding: 0;
   margin: 0;
@@ -17,6 +22,7 @@ html {
 }
 .reviews {
   padding: 100px 0 30px;
+  background-color: var(--color-bg-light);
 }
 .reviews h2 {
   text-align: center;
@@ -28,14 +34,19 @@ html {
 }
 .btn {
   cursor: pointer;
-  text-align: center;
-  font-size: 13px;
-  font-weight: 700;
-  color: #000;
-  border: 1px solid var(--color-main);
-  border-radius: 3px;
   margin: 0 0 0 15px;
+  font-size: 13px;
+  text-align: center;
+  width: auto;
+  height: fit-content;
+  line-height: 30px;
+  background: 0 0;
+  color: #000;
   padding: 5px 20px;
+  border-radius: 3px;
+  border: 1px solid var(--color-main);
+  font-weight: 700;
+  box-shadow: 2px 3px 5px 0 #8888886b;
 }
 .btn:hover {
   box-shadow: none;
@@ -43,4 +54,120 @@ html {
 .reviews .container {
   padding: 0 30px;
   display: flex;
+}
+/* ------ Part1 : Global Reviews ------ */
+.reviews .reviews-global {
+  flex: 1;
+  position: relative;
+}
+.reviews .reviews-global::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 1px;
+  height: 100%;
+  background-color: #ddd;
+}
+.reviews .reviews-global h1 {
+  font-family: "Lato";
+  font-weight: 900;
+  color: #000;
+  margin: 0;
+  margin-bottom: 5px;
+}
+.reviews .reviews-global .stars {
+  margin-bottom: 20px;
+  color: #ffab41;
+}
+.reviews .reviews-global p {
+  color: var(--color-text);
+}
+/* ------ Part 2 Reviews Statistics ------ */
+.reviews .reviews-stats {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.reviews .reviews-stats::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 5%;
+  width: 1px;
+  height: 100%;
+  background-color: #ddd;
+}
+.reviews .reviews-stats .stat-rating {
+  display: flex;
+  align-items: center;
+  transition: var(--transition-main);
+}
+
+.reviews .reviews-stats:hover .stat-rating {
+  opacity: 0.5;
+}
+.reviews .reviews-stats .stat-rating:hover {
+  opacity: 1;
+}
+
+.reviews .stat-rating .stat-rating-title {
+  color: var(--color-main);
+}
+.reviews .stat-rating .progress {
+  width: 150px;
+  height: 15px;
+  background-color: #ddd;
+  margin: 5px 5px;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+.reviews .stat-rating .progress span {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  background-color: var(--color-main);
+  transition: var(--transition-main);
+}
+.reviews .stat-rating span:last-of-type {
+  color: var(--color-text);
+  flex: 1;
+}
+/* ------ Part 3 : Reviews interactions ------ */
+.reviews .reviews-interactions {
+  flex: 1;
+  display: flex;
+}
+.reviews .reviews-interactions i {
+  margin-right: 10px;
+}
+@media (max-width: 1199px) {
+  .reviews .reviews-interactions {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .reviews .reviews-stats::after {
+    right: 1px;
+  }
+}
+@media (max-width: 991px) {
+  .reviews .container {
+    flex-direction: column;
+    row-gap: 30px;
+    align-items: center;
+  }
+  .reviews .reviews-global {
+    text-align: center;
+  }
+  .reviews .reviews-global::after,
+  .reviews .reviews-stats::after {
+    display: none;
+  }
+  .reviews .reviews-interactions {
+    row-gap: 20px;
+  }
 }
