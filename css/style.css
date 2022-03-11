@@ -148,6 +148,11 @@ nav .nav-right {
 .user-profile a {
   color: #1876f2;
 }
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
 .setting-menu-inner {
   padding: 20px;
 }
