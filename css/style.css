@@ -305,3 +305,75 @@ nav .nav-right {
   border-radius: 50%;
 }
 /* ______________________________________________________ End Right SideBar */
+
+/* ______________________________________________________ Start Main Content */
+
+.container .main-content {
+  flex-basis: 47%;
+}
+/* ______________________________ Story Start */
+
+.story-gallery {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.story-gallery .story {
+  flex-basis: 18%;
+  padding-top: 32%;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.story-gallery .story img {
+  position: absolute;
+  width: 45px;
+  border-radius: 50%;
+  top: 10px;
+  left: 10px;
+  border: 5px solid var(--color-primary);
+}
+.story-gallery .story p {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+}
+.story.story1 img {
+  top: unset;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  border: 0;
+  width: 35px;
+  cursor: pointer;
+}
+.story1 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6)),
+    url(../images/status-1.png);
+}
+
+.story2 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6)),
+    url(../images/status-2.png);
+}
+
+.story3 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6)),
+    url(../images/status-3.png);
+}
+
+.story4 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6)),
+    url(../images/status-4.png);
+}
+
+.story5 {
+  background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.6)),
+    url(../images/status-5.png);
+}
+/* ______________________________ Story End */
