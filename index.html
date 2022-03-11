@@ -14,11 +14,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Fav icon -->
-    <link
-      rel="shortcut icon"
-      href="./images/favicon-32x32.png"
-      type="image/x-icon"
-    />
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon" />
     <!-- Font Awesome Library -->
     <link rel="stylesheet" href="./css/all.min.css" />
 
@@ -36,6 +32,27 @@
     <title>Home| MetaBook</title>
   </head>
   <body>
+    <!-- ___________________ start navbar section ___________________ -->
+    <nav>
+      <div class="nav-left">
+        <a class="logo" href="">Metabook</a>
+        <ul>
+          <li><img src="images/notification.png" alt="" /></li>
+          <li><img src="images/inbox.png" alt="" /></li>
+          <li><img src="images/video.png" alt="" /></li>
+        </ul>
+      </div>
+      <div class="nav-right">
+        <div class="search-box">
+          <img src="images/search.png" alt="search" />
+          <input type="search" name="search" placeholder="Search" />
+        </div>
+        <div class="nav-user-icon online" onclick="settinsMenuToggle()">
+          <img src="images/profile-pic.jpg" alt="profile- picture" />
+        </div>
+      </div>
+    </nav>
+    <!-- ___________________ End navbar section ___________________ -->
     <script src="./js/main.js"></script>
   </body>
 </html>
