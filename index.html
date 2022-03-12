@@ -21,12 +21,6 @@
     <!-- Render all element Normally from: https://necolas.github.io/ -->
     <link rel="stylesheet" href="./css/normalize.css" />
 
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
-      rel="stylesheet"
-    />
-
     <!-- Main style -->
     <link rel="stylesheet" href="./css/style.css" />
     <title>Home| MetaBook</title>
@@ -36,17 +30,17 @@
     <nav>
       <div class="nav-left">
         <a class="logo" href="">Metabook</a>
+        <div class="search-box">
+          <img src="images/search.png" alt="search" />
+          <input type="search" name="search" placeholder="Search" />
+        </div>
+      </div>
+      <div class="nav-right">
         <ul>
           <li><img src="images/notification.png" alt="" /></li>
           <li><img src="images/inbox.png" alt="" /></li>
           <li><img src="images/video.png" alt="" /></li>
         </ul>
-      </div>
-      <div class="nav-right">
-        <div class="search-box">
-          <img src="images/search.png" alt="search" />
-          <input type="search" name="search" placeholder="Search" />
-        </div>
         <div class="nav-user-icon online" onclick="settinsMenuToggle()">
           <img src="images/profile-pic.jpg" alt="profile- picture" />
         </div>

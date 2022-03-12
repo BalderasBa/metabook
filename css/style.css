@@ -33,7 +33,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   background: var(--color-primary);
-  padding: 5px 5%;
+  padding: 5px 3%;
   position: sticky;
   top: 0;
   z-index: 100;
@@ -44,11 +44,9 @@ nav .nav-right {
   align-items: center;
 }
 .nav-left .logo {
-  /* width: 160px; */
   margin-right: 45px;
-  font-family: Arial, Helvetica, sans-serif;
   font-weight: 900;
-  font-size: 30px;
+  font-size: 25px;
   color: #fff;
 }
 .nav-left .logo::first-letter {
@@ -56,14 +54,14 @@ nav .nav-right {
   background-color: #fff;
   border-radius: 50%;
 }
-.nav-left ul li {
+.nav-right ul li {
   display: inline-flex;
 }
-.nav-left ul li img {
+.nav-right ul li img {
   width: 28px;
   margin: 0 15px;
 }
-.nav-right .search-box {
+.nav-left .search-box {
   background: #efefef;
   width: 350px;
   border-radius: 20px;
@@ -71,10 +69,10 @@ nav .nav-right {
   align-items: center;
   padding: 0 15px;
 }
-.nav-right .search-box img {
+.nav-left .search-box img {
   width: 18px;
 }
-.nav-right .search-box input {
+.nav-left .search-box input {
   width: 100%;
   background: transparent;
   padding: 10px;
@@ -181,7 +179,7 @@ nav .nav-right {
 .container {
   display: flex;
   justify-content: space-between;
-  padding: 13px 5%;
+  padding: 13px 3%;
 }
 /* ______________________________________________________ Start Left SideBar */
 
@@ -199,9 +197,15 @@ nav .nav-right {
 .shortcut-links a {
   display: flex;
   align-items: center;
-  margin-bottom: 30px;
+  padding: 10px;
   color: #626262;
   width: fit-content;
+  transition: 300ms;
+}
+.left-sidebar a:hover {
+  border-radius: 10px;
+  background-color: #0001;
+  padding-left: 1px;
 }
 .imp-links a img {
   width: 20px;
@@ -546,12 +550,26 @@ footer {
 }
 /* -------------------- Responsive -------------------- */
 
+@media (max-width: 991px) {
+  .nav-left .search-box {
+    width: 250px;
+  }
+  .container .right-sidebar {
+    display: none;
+  }
+  .container .main-content {
+    flex-basis: 70%;
+  }
+}
 @media (max-width: 767px) {
   .container .right-sidebar,
   .container .left-sidebar {
     display: none;
   }
-  .nav-right .search-box {
+  .nav-left .search-box {
     display: none;
+  }
+  .container .main-content {
+    flex-basis: 100%;
   }
 }
