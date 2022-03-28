@@ -56,6 +56,7 @@ nav .nav-right {
 }
 .nav-right ul li {
   display: inline-flex;
+  cursor: pointer;
 }
 .nav-right ul li img {
   width: 28px;
@@ -71,6 +72,7 @@ nav .nav-right {
 }
 .nav-left .search-box img {
   width: 18px;
+  cursor: pointer;
 }
 .nav-left .search-box input {
   width: 100%;
@@ -78,6 +80,7 @@ nav .nav-right {
   padding: 10px;
   outline: none;
   border: 0;
+  caret-color: #1876f2;
 }
 .nav-right .nav-user-icon {
   margin-left: 30px;
